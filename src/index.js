@@ -40,7 +40,7 @@ const MORSE_TABLE = {
 function decode(expr) {
     // write your solution here
     let myObj = [];
-    myObj = expr.replace(/[*]{10}/g, ' ').replace(/\d\d\d\d\d\d\d\d\d\d/g, "$& ").replace(/00+/g,'').replace(/10/g,'.').replace(/11/g,'-').split(' ').map(el => MORSE_TABLE[el] || ' ').join('').trim();
+    myObj = expr.replace(/[*]{10}/g, ' ').replace(/\d\d\d\d\d\d\d\d\d\d/g, "$& ").replace(/00+/g,'').replace(/10/g,'.').replace(/11/g,'-').split(' ').map(key => MORSE_TABLE[key] || ' ').join('').trim();
     return myObj;
 }
 
